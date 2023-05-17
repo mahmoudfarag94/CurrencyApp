@@ -1,0 +1,6 @@
+framework module Pods_SaryApp_SaryAppUITests {
+  umbrella header "Pods-SaryApp-SaryAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
