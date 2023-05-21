@@ -1,11 +1,12 @@
 PODS:
-  - Alamofire (5.6.4)
+  - Alamofire (5.7.1)
+  - CocoaDebug (1.7.2)
   - Differentiator (5.0.0)
   - Kingfisher (6.3.1)
+  - MBProgressHUD (1.2.0)
   - NVActivityIndicatorView (5.1.1):
     - NVActivityIndicatorView/Base (= 5.1.1)
   - NVActivityIndicatorView/Base (5.1.1)
-  - ProgressHUD (2.70)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
@@ -20,9 +21,10 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - CocoaDebug
   - Kingfisher (~> 6.0)
+  - MBProgressHUD (~> 1.2.0)
   - NVActivityIndicatorView
-  - ProgressHUD
   - RxCocoa
   - RxDataSources
   - RxSwift
@@ -31,10 +33,11 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - CocoaDebug
     - Differentiator
     - Kingfisher
+    - MBProgressHUD
     - NVActivityIndicatorView
-    - ProgressHUD
     - RxCocoa
     - RxDataSources
     - RxRelay
@@ -42,17 +45,18 @@ SPEC REPOS:
     - Toast-Swift
 
 SPEC CHECKSUMS:
-  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
+  CocoaDebug: 61cf93ada6ce8f3407507dc01f9b874d91ac1d5c
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
-  ProgressHUD: e603e8b8622c47d8818b9fb38b3cfe9d3e7ca421
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 5f11728e0fd67ca27340fe740eec115f9f8551dc
+PODFILE CHECKSUM: c9ca2779c73a709dee8a119f7fb934057ac24d88
 
 COCOAPODS: 1.11.3

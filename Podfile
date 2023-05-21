@@ -14,8 +14,11 @@ target 'SaryApp' do
   pod 'Toast-Swift'
   pod 'Kingfisher', '~> 6.0'
   pod 'NVActivityIndicatorView'
-   pod 'ProgressHUD'
-
+  pod 'MBProgressHUD', '~> 1.2.0'
+#  pod 'ProgressHUD'
+  pod 'RxDataSources'
+  pod 'CocoaDebug'
+   
   target 'SaryAppTests' do
     inherit! :search_paths
     # Pods for testing
