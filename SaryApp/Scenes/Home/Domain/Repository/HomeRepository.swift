@@ -9,18 +9,22 @@ import Foundation
 import Alamofire
 
 protocol HomeRepositoryPro{
-    func getAllCatalog<E: GeneralResponsePro>( completion: @escaping Response<E>)
-    func getBanner<E: GeneralResponsePro>( completion: @escaping Response<E>)
+    associatedtype T
+    //E: GeneralResponsePro
+    func getAllCatalog<T>( completion: @escaping Response<T>)
+    func getBanner<T>( completion: @escaping Response<T>)
 }
 
 class HomeRepository: HomeRepositoryPro{
     
-    func getAllCatalog<E>(completion: @escaping Response<E>) where E : GeneralResponsePro {
+    typealias T = GeneralResponsePro
+    
+    func getAllCatalog<T>(completion: @escaping Response<T>) where T : Decodable, T : Encodable {
         let req = BaseRequest(path: WebServices.catalog.getEndPoint())
         GenaricService.shared.request(request: req, completion: completion)
     }
     
-    func getBanner<E>(completion: @escaping Response<E>) where E : GeneralResponsePro {
+    func getBanner<T>(completion: @escaping Response<T>) where T  : Decodable, T : Encodable {
         let req = BaseRequest(path: WebServices.banners.getEndPoint())
         GenaricService.shared.request(request: req, completion: completion)
     }
