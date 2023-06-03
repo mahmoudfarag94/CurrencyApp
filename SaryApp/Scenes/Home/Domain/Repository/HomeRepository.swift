@@ -28,7 +28,7 @@ class HomeRepository: HomeRepositoryPro{
     }
     
     func getBanner<T>(completion: @escaping Response<T>) where T  : Decodable, T : Encodable {
-        dataSource.getAllCatalog(completion: completion)
+        dataSource.getBanner(completion: completion)
     }
 }
 
