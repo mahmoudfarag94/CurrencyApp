@@ -10,7 +10,7 @@ import Foundation
 class FetchBannerUseCase{
     
     private let repo: any HomeRepositoryPro
-    internal init(repo: any HomeRepositoryPro = HomeRepository()) {
+    internal init(repo: any HomeRepositoryPro = HomeRepository(dataSource: HomeDataSource())) {
         self.repo = repo
     }
     

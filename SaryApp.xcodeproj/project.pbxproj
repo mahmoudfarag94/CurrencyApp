@@ -49,6 +49,7 @@
 		CEC50E032A194F9300178572 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC50E012A194F9300178572 /* HomeTableViewCell.xib */; };
 		CEC50E0C2A1AB13200178572 /* BannerResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC50E0B2A1AB13200178572 /* BannerResponseModel.swift */; };
 		CEC50E0E2A1AB34A00178572 /* BannerUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC50E0D2A1AB34A00178572 /* BannerUsecase.swift */; };
+		CEFB189A2A2B567E00192DBF /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB18992A2B567E00192DBF /* HomeDataSource.swift */; };
 		E87BFFB76980544AFB4418C5 /* Pods_SaryAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5934D0BBCCE4FA88544DC00C /* Pods_SaryAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +123,7 @@
 		CEC50E012A194F9300178572 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		CEC50E0B2A1AB13200178572 /* BannerResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerResponseModel.swift; sourceTree = "<group>"; };
 		CEC50E0D2A1AB34A00178572 /* BannerUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerUsecase.swift; sourceTree = "<group>"; };
+		CEFB18992A2B567E00192DBF /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		E3757C1076550960631E3980 /* Pods-SaryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaryApp.debug.xcconfig"; path = "Target Support Files/Pods-SaryApp/Pods-SaryApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -431,11 +433,12 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
-		CEC50DD12A1805DB00178572 /* Data */ = {
+		CEC50DD12A1805DB00178572 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				CEFB18992A2B567E00192DBF /* HomeDataSource.swift */,
 			);
-			path = Data;
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		CEC50DD22A1805E000178572 /* Presentation */ = {
@@ -471,7 +474,7 @@
 				CEC50DCA2A17B5F800178572 /* Main.storyboard */,
 				CEC50DD22A1805E000178572 /* Presentation */,
 				CEC50DD02A1805CF00178572 /* Domain */,
-				CEC50DD12A1805DB00178572 /* Data */,
+				CEC50DD12A1805DB00178572 /* DataSource */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -785,6 +788,7 @@
 				CEC50D962A1567B700178572 /* BaseUseCase.swift in Sources */,
 				CEC50E0E2A1AB34A00178572 /* BannerUsecase.swift in Sources */,
 				CEC50DD52A18060C00178572 /* HomeRepository.swift in Sources */,
+				CEFB189A2A2B567E00192DBF /* HomeDataSource.swift in Sources */,
 				CEC50DB62A157BC200178572 /* HomeHeaderView.swift in Sources */,
 				CEC50D1E2A1566CD00178572 /* SceneDelegate.swift in Sources */,
 				CEC50E0C2A1AB13200178572 /* BannerResponseModel.swift in Sources */,

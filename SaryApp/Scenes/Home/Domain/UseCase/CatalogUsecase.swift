@@ -10,7 +10,7 @@ import Foundation
 class FetchCatelogUseCase{
     
     private let repo: any HomeRepositoryPro
-    internal init(repo: any HomeRepositoryPro = HomeRepository()) {
+    internal init(repo: any HomeRepositoryPro = HomeRepository(dataSource: HomeDataSource())) {
         self.repo = repo
     }
     
@@ -18,9 +18,6 @@ class FetchCatelogUseCase{
         repo.getAllCatalog(completion: completion)
     }
     
-    func getBannerData(_ completion: @escaping Response<BannerResponseModel>){
-        repo.getAllCatalog(completion: completion)
-    }
 }
 
 
