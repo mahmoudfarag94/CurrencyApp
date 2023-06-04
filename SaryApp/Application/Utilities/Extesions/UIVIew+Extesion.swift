@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 import Toast_Swift
 import MBProgressHUD
-
+import DropDown
 
 class DynamicHeightCollectionView: UICollectionView {
     
@@ -359,6 +359,30 @@ extension UIViewController: Refreshable{
             alertController.addAction(cancelAction)
             self.present(alertController, animated: true, completion: nil)
         }
+    }
+    
+    
+    func setDropDownMenu(view:UIView,width:CGFloat,completion:@escaping (_ item:String,_ index:Int)->Void)-> DropDown {
+        let dropDown = DropDown()
+
+        dropDown.anchorView = view
+        dropDown.width = width //view.frame.width
+        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
+        let x = 1
+        //Language.language == .arabic ? -1 : 1
+        
+        dropDown.layer.setAffineTransform(CGAffineTransform(scaleX: CGFloat(x), y: 1))
+        dropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
+            // Setup your custom UI components
+            cell.optionLabel.layer.setAffineTransform(CGAffineTransform(scaleX: CGFloat(x), y: 1))
+            cell.optionLabel.textAlignment = .center
+        }
+        // Action triggered on selection
+        dropDown.selectionAction = { (index: Int, item: String) in
+            print("Selected item: \(item) at index: \(index)")
+            completion(item,index)
+        }
+        return dropDown
     }
        
 }

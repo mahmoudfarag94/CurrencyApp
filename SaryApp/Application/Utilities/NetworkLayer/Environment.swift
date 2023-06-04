@@ -23,9 +23,9 @@ enum EnviromentType{
     private func getEnviroment()->String{
         switch EnviromentType.current {
         case .production:
-            return "https://staging.sary.to/api/baskets/328594/"
+            return "http://data.fixer.io/api/"
         case .debuging:
-            return "https://staging.sary.to/api/baskets/328594/"
+            return "http://data.fixer.io/api/"
         }
     }
     
@@ -37,19 +37,25 @@ enum EnviromentType{
 //MARK: -
 
 enum WebServices: String{
-    
+    //access_key=f6631da0c331764ddbdcda3597133256
     //MARK: - Home .
-    case banners = "banners"
-    case catalog = "catalog"
+    case latest = "latest"
+    case Historical = "Historical"
+    case symbols = "symbols"
     
     func getEndPoint() -> String{
         let base = EnviromentType.baseUrl
         print("base url - ---- \(base)")
         switch self {
-        case .catalog:
-            return "\(String(describing: base))\(rawValue)/"
-        case .banners:
-            return "\(String(describing: base))\(rawValue)/"
+        case .Historical:
+            return "\(String(describing: base))2023-06-01?access_key=f6631da0c331764ddbdcda3597133256"
+        default:
+            return "\(String(describing: base))\(rawValue)?access_key=f6631da0c331764ddbdcda3597133256"
+       
+//        case .timeseries:
+//            return "\(String(describing: base))\(rawValue)/"
+//        case .symbole:
+//            return "\(String(describing: base))\(rawValue)/"
         }
     }
 }

@@ -9,14 +9,14 @@ target 'SaryApp' do
 
   pod 'RxSwift'
   pod 'RxCocoa'
-  pod 'Alamofire'
   pod 'RxDataSources'
+  pod 'RxBiBinding'
+  pod 'DropDown'
+  pod 'Alamofire'
   pod 'Toast-Swift'
   pod 'Kingfisher', '~> 6.0'
   pod 'NVActivityIndicatorView'
   pod 'MBProgressHUD', '~> 1.2.0'
-#  pod 'ProgressHUD'
-  pod 'RxDataSources'
   pod 'CocoaDebug'
    
   target 'SaryAppTests' do

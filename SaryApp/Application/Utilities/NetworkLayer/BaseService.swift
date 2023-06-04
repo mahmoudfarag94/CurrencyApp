@@ -31,7 +31,7 @@ class BaseNetworkService {
         
         AF.request(request.path, method: request.method,
                    parameters: request.paramters,
-                   headers: request.header)
+                   headers: nil)
         .responseJSON { response in
             switch response.result {
             case .success:

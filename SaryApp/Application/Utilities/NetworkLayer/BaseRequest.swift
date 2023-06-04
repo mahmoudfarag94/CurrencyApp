@@ -38,6 +38,9 @@ class BaseRequest{
                                         "Accept-Language": lang ,
                                         "Device-Type":"ios"]
         
+        
+
+        
         return header
     }
 }

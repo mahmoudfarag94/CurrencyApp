@@ -22,13 +22,13 @@ class GenaricService{
                     let data = try JSONSerialization.jsonObject(with: data, options: [])
                     let dictionary = data as? [String: Any]
                     let json = try JSONSerialization.data(withJSONObject: dictionary as Any, options: .prettyPrinted)
-                    let success = dictionary?["status"] as? Bool
-                    guard success ?? false else {
-                        let jsonDecoder = JSONDecoder()
-                        let error = try jsonDecoder.decode(ModelError.self, from: json)
-                        completion(.failure(error.message))
-                        return
-                    }
+//                    let success = dictionary?["status"] as? Bool
+//                    guard success ?? false else {
+//                        let jsonDecoder = JSONDecoder()
+//                        let error = try jsonDecoder.decode(ModelError.self, from: json)
+//                        completion(.failure(error.message))
+//                        return
+//                    }
                     let decoder = JSONDecoder()
                     let model = try decoder.decode(T.self, from: json)
                     completion(.success(model))
