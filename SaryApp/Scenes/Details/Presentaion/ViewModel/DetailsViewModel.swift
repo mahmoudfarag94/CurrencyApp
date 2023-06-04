@@ -13,6 +13,8 @@ import RxSwift
 
 
 
+
+
 class DetailsViewModel: BaseViewModel{
     
     var historicalRelay = BehaviorRelay<[RateModel]>(value: [])
