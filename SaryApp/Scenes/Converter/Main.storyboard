@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mTG-Pa-hy3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PVQ-Uy-Ffc">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ika-PE-xTy">
-                                <rect key="frame" x="15" y="100" width="290" height="150"/>
+                                <rect key="frame" x="15" y="144" width="290" height="150"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="krZ-ys-FaF">
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="40"/>
@@ -83,14 +83,14 @@
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron" translatesAutoresizingMaskIntoConstraints="NO" id="Cky-eV-K7i">
-                                <rect key="frame" x="90" y="115" width="10" height="10"/>
+                                <rect key="frame" x="90" y="159" width="10" height="10"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="dmD-RW-ksy"/>
                                     <constraint firstAttribute="width" secondItem="Cky-eV-K7i" secondAttribute="height" id="nUJ-1K-4So"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron" translatesAutoresizingMaskIntoConstraints="NO" id="RZu-h1-czy">
-                                <rect key="frame" x="290" y="115" width="10" height="10"/>
+                                <rect key="frame" x="290" y="159" width="10" height="10"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RZu-h1-czy" secondAttribute="height" id="tNC-5I-I9S"/>
                                     <constraint firstAttribute="height" constant="10" id="xYd-Ue-VzZ"/>
@@ -110,6 +110,7 @@
                             <constraint firstItem="Cky-eV-K7i" firstAttribute="trailing" secondItem="hdY-fG-QLy" secondAttribute="trailing" constant="-5" id="z1A-4P-WQ2"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="32D-ql-mC6"/>
                     <connections>
                         <outlet property="detailsBtn" destination="k9H-pg-lwO" id="NGi-2H-SsY"/>
                         <outlet property="fromAmount" destination="GNi-3o-ZKr" id="BGU-uP-Jha"/>
@@ -121,7 +122,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="icv-bL-G1N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="811" y="-2"/>
+            <point key="canvasLocation" x="1504" y="-2"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oJ9-BU-D20">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PVQ-Uy-Ffc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CnD-6l-eeo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mTG-Pa-hy3" kind="relationship" relationship="rootViewController" id="JeS-E9-KS0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a67-hY-Sd2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="810" y="-2.112676056338028"/>
         </scene>
     </scenes>
     <resources>

@@ -48,7 +48,7 @@ enum WebServices: String{
         print("base url - ---- \(base)")
         switch self {
         case .Historical:
-            return "\(String(describing: base))2023-06-01?access_key=f6631da0c331764ddbdcda3597133256"
+            return "\(String(describing: base))"
         default:
             return "\(String(describing: base))\(rawValue)?access_key=f6631da0c331764ddbdcda3597133256"
        

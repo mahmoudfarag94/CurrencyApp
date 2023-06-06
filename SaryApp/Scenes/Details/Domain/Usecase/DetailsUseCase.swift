@@ -14,8 +14,8 @@ class DetailsUseCase{
         self.repo = repo
     }
     
-    func getHistorical(_ completion: @escaping Response<HistoricalResponseModel>){
-        repo.getHistorical(completion: completion)
+    func getHistorical(date: String , _ completion: @escaping Response<HistoricalResponseModel>){
+        repo.getHistorical(date: date, completion: completion)
     }
 }
 

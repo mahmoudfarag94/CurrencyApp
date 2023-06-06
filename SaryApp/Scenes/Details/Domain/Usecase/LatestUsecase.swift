@@ -13,8 +13,8 @@ class LatestUseCase{
         self.repo = repo
     }
     
-    func getLatest(_ completion: @escaping Response<HistoricalResponseModel>){
-        repo.getLatest(completion: completion)
+    func getLatest(base: String,_ completion: @escaping Response<HistoricalResponseModel>){
+        repo.getLatest(base: base , completion: completion)
     }
 }
 

@@ -12,6 +12,7 @@ struct HistoricalResponseModel: GeneralResponsePro{
     var timestamp:Int?
     var base:String?
     var rates: RatesResponseModel?
+    var error: ErrorsResponseModel?
 }
 
 struct RateModel: Codable{
@@ -37,8 +38,8 @@ struct RatesResponseModel: Codable{
         init?(intValue: Int) {
             return nil
         }
-        
     }
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: DynamicCodingKeys.self)
         var tempArray = [RateModel]()
@@ -50,5 +51,55 @@ struct RatesResponseModel: Codable{
             tempArray.append(item)
         }
         rates = tempArray
+    }
+}
+struct ErrorModel: Codable{
+    var code:Int?
+    var type:String?
+    
+    init(code: Int? = nil, type: String? = nil) {
+        self.code = code
+        self.type = type
+    }
+}
+
+struct ErrorsResponseModel: Codable{
+    var errors: ErrorModel?
+    
+   
+    init(){}
+    private struct DynamicCodingKeys: CodingKey {
+        var stringValue: String
+        init?(stringValue: String) {
+            self.stringValue = stringValue
+        }
+        
+        var intValue: Int?
+        init?(intValue: Int) {
+            return nil
+        }
+        
+    }
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: DynamicCodingKeys.self)
+//        var tempArray = [ErrorModel]()
+        for key in container.allKeys {
+           
+            var object = ""
+            if key.stringValue == "type"{
+                print("all keys \(key)")
+                let decodedObject = try container.decode(String.self, forKey: DynamicCodingKeys(stringValue: key.stringValue)!)
+                object = decodedObject
+                let item = ErrorModel(code: key.intValue ?? 0, type: object)
+                errors = item
+            }else{
+//                let decodedObject = try container.decode(Int.self, forKey: DynamicCodingKeys(stringValue: key.stringValue)!)
+//                object = "\(decodedObject)"
+            }
+//            print("the object decoded" , object)
+//            let item = ErrorModel(code: key.intValue ?? 0, type: "\(object)")
+//            tempArray.append(item)
+        }
+//        errors = tempArray
     }
 }

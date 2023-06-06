@@ -10,8 +10,8 @@ import Alamofire
 
 protocol DetailsRepositoryPro{
     associatedtype T
-    func getHistorical<T>( completion: @escaping Response<T>)
-    func getLatest<T>( completion: @escaping Response<T>)
+    func getHistorical<T>(date: String, completion: @escaping Response<T>)
+    func getLatest<T>(base: String , completion: @escaping Response<T>)
 }
 
 class DetailsRepository: DetailsRepositoryPro{
@@ -23,12 +23,12 @@ class DetailsRepository: DetailsRepositoryPro{
         self.dataSource = dataSource
     }
     
-    func getHistorical<T>(completion: @escaping Response<T>) where T : Decodable, T : Encodable {
-        dataSource.getHistorical(completion: completion)
+    func getHistorical<T>(date: String, completion: @escaping Response<T>) where T : Decodable, T : Encodable {
+        dataSource.getHistorical(date: date,  completion: completion)
     }
     
-    func getLatest<T>(completion: @escaping Response<T>) where T : Decodable, T : Encodable {
-        dataSource.getLatest(completion: completion)
+    func getLatest<T>(base: String, completion: @escaping Response<T>) where T : Decodable, T : Encodable {
+        dataSource.getLatest(base: base , completion: completion)
     }
 }
 
