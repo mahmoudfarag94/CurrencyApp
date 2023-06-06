@@ -38,7 +38,6 @@
                                                             <constraint firstAttribute="width" secondItem="dwZ-YU-Uek" secondAttribute="height" multiplier="1:1" id="uY7-I9-p2U"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="swap"/>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -145,7 +144,6 @@
     </scenes>
     <resources>
         <image name="chevron" width="512" height="512"/>
-        <image name="swap" width="170.5" height="170.5"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
