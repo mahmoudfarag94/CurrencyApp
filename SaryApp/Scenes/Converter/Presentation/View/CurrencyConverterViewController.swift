@@ -68,7 +68,10 @@ class CurrencyConverterViewController: BaseViewController<CurrencyConverterViewM
         
         detailsBtn.rx.tap.subscribe(onNext: {
             let details = DetailsViewController.init(nibName: "DetailsViewController", bundle: nil)
-            details.base = viewModel.basePublisher.value
+            let vm = DetailsViewModel(historicalUsacase: DetailsUseCase(), latestUsacase: LatestUseCase())
+            vm.base = viewModel.basePublisher.value
+            vm.target = viewModel.targetPublisher.value
+            details.viewModel = vm
             self.navigationController?.pushViewController(details, animated: true)
         }).disposed(by: viewModel.bag)
     }

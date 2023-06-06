@@ -37,7 +37,6 @@ enum EnviromentType{
 //MARK: -
 
 enum WebServices: String{
-    //access_key=f6631da0c331764ddbdcda3597133256
     //MARK: - Home .
     case latest = "latest"
     case Historical = "Historical"
@@ -50,7 +49,7 @@ enum WebServices: String{
         case .Historical:
             return "\(String(describing: base))"
         default:
-            return "\(String(describing: base))\(rawValue)?access_key=f6631da0c331764ddbdcda3597133256"
+            return "\(String(describing: base))\(rawValue)?access_key=6ebfbbddb52f723dfce41168817eef3d"
        
 //        case .timeseries:
 //            return "\(String(describing: base))\(rawValue)/"

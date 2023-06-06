@@ -9,18 +9,14 @@ import UIKit
 import RxSwift
 
 
-class HistoricalUIModel{
-    
-    
-}
-
 class DetailsViewController: BaseViewController<DetailsViewModel> {
 
     @IBOutlet weak var ratesDetailsTblView: UITableView!
-    var base:String?
+    @IBOutlet weak var historyTblView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = DetailsViewModel(historicalUsacase: DetailsUseCase(), latestUsacase: LatestUseCase())
+//        viewModel = DetailsViewModel(historicalUsacase: DetailsUseCase(), latestUsacase: LatestUseCase())
         bindSubscribers()
     }
     
@@ -33,7 +29,12 @@ class DetailsViewController: BaseViewController<DetailsViewModel> {
             cell.setData(model: item)
         }.disposed(by: viewModel.bag)
         
-        viewModel.getLatestData(base: base)
         
+        historyTblView.register(cellType: HistoryTableViewCell.self)
+        viewModel.historicalRelay.bind(to: historyTblView.rx.items(cellIdentifier: "HistoryTableViewCell", cellType: HistoryTableViewCell.self)){(index, item, cell) in
+            cell.setData(model: item)
+        }.disposed(by: viewModel.bag)
+        
+        viewModel.getLatestData(base: viewModel.base ?? "EUR")
     }
 }

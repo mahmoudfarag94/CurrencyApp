@@ -11,6 +11,7 @@ struct HistoricalResponseModel: GeneralResponsePro{
     var success: Bool?
     var timestamp:Int?
     var base:String?
+    var date:String?
     var rates: RatesResponseModel?
     var error: ErrorsResponseModel?
 }
@@ -102,4 +103,11 @@ struct ErrorsResponseModel: Codable{
         }
 //        errors = tempArray
     }
+}
+
+
+
+struct HistoryUIModel{
+    var day:String
+    var rates:[RateModel]
 }
